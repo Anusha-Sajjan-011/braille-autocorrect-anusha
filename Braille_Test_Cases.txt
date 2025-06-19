@@ -1,0 +1,65 @@
+--> Test Cases – Braille Auto-Correct System
+Submitted by: Anusha Malathesh G
+
+
+
+✅ Test Case 1: Exact Match
+Input:
+["DOP", "D", "DK", "DKO", "DOP"]
+Expected Output:
+hello (distance: 0)
+Remarks: Correct input, matches dictionary exactly.
+
+
+
+✅ Test Case 2: One Typo
+Input:
+["DOP", "D", "DK", "DWO"]
+Expected Output:
+help (distance: 1)
+Remarks: Slight mistake in the last character, still corrected.
+
+
+
+✅ Test Case 3: Short Word
+Input:
+["DK", "D", "DP"]
+Expected Output:
+cat (distance: 0)
+Remarks: Exact match for a short word.
+
+
+
+✅ Test Case 4: One Extra Input
+Input:
+["DK", "O", "D", "D"]
+Expected Output:
+code (distance: 1)
+Remarks: One extra key at the end, still correctly suggested.
+
+
+
+✅ Test Case 5: Close to ‘dog’
+Input:
+["DOP", "D", "DO"]
+Expected Output:
+dog (distance: 1)
+Remarks: Partial character typed, but close enough.
+
+
+
+✅ Test Case 6: Extra Key at Start
+Input:
+["DOK", "D", "DK", "DKO", "DOP"]
+Expected Output:
+hello (distance: 1)
+Remarks: One extra key in the first letter.
+
+
+
+✅ Test Case 7: Unknown Input
+Input:
+["Q", "W", "O"]
+Expected Output:
+Closest match (e.g., cat or dog) with high distance
+Remarks: Random input to test how gracefully it fails.
